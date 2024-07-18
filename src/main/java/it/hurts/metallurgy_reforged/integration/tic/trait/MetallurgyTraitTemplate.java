@@ -1,5 +1,5 @@
 /*==============================================================================
- = Class: MetallurgyTraitWither
+ = Class: MetallurgyTraitDecay
  = This class is part of Metallurgy 4: Reforged
  = Complete source code is available at https://github.com/Davoleo/Metallurgy-4-Reforged
  = This code is licensed under GNU GPLv3
@@ -10,27 +10,23 @@
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
 import it.hurts.metallurgy_reforged.util.Utils;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.init.MobEffects;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.text.TextFormatting;
+import net.minecraft.nbt.NBTTagCompound;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 import javax.annotation.Nullable;
 
-public class MetallurgyTraitWither extends AbstractTrait implements IMetallurgyTrait {
+public class MetallurgyTraitTemplate extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitWither()
+	public MetallurgyTraitTemplate()
 	{
-		super("wither_trait", TextFormatting.BLACK);
+		super("decay_trait", 0xFF575000);
+		this.register("metallurgy.trait.decay", "metallurgy.trait.decay.tooltip");
 	}
 
 	@Override
-	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit)
+	public void applyEffect(NBTTagCompound rootCompound, NBTTagCompound modifierTag)
 	{
-		if ((int) (Math.random() * 100) <= 20)
-			target.addPotionEffect(new PotionEffect(MobEffects.WITHER, 30, 1, false, true));
+		super.applyEffect(rootCompound, modifierTag);
 	}
 
 	@Override
