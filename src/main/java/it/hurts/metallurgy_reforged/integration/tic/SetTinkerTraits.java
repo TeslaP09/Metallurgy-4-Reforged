@@ -39,8 +39,8 @@ public class SetTinkerTraits {
 			break;
 
 			case "vulcanite":
-				material.addTrait(MetallurgyTinkerTraits.vulcanTrait1, HEAD);
-				material.addTrait(superheat, HANDLE);
+				material.addTrait(MetallurgyTinkerTraits.explosiveTrait, HEAD);
+				material.addTrait(aridiculous);
 			break;
 
 			case "eximite":

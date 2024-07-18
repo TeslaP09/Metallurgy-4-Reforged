@@ -31,6 +31,8 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait kingDiceTrait = new MetallurgyTraitKingDice();
 	public static final AbstractTrait duplicaitonTrait = new MetallurgyTraitDuplication();
 	public static final AbstractTrait opistognathusTrait = new MetallurgyTraitOpistognathus();
+	
+	public static final AbstractTrait explosiveTrait = new MetallurgyTraitExplosive();
 
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
