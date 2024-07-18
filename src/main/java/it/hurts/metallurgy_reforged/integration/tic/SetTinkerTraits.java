@@ -35,7 +35,6 @@ public class SetTinkerTraits {
 			break;
 
 			case "ignatius":
-				material.addTrait(MetallurgyTinkerTraits.vulcanTrait, HEAD);
 			break;
 
 			case "vulcanite":
@@ -61,16 +60,14 @@ public class SetTinkerTraits {
 			break;
 
 			case "shadow_iron":
-				addToEveryPart(material, MetallurgyTinkerTraits.obscureTrait);
 			break;
 
 			case "sanguinite":
-				material.addTrait(MetallurgyTinkerTraits.lifeStealTrait, HEAD);
-				material.addTrait(MetallurgyTinkerTraits.lifeStealTrait, HANDLE);
+				material.addTrait(MetallurgyTinkerTraits.devouringTrait, HEAD);
+				material.addTrait(insatiable);
 			break;
 
 			case "tartarite":
-				material.addTrait(MetallurgyTinkerTraits.witherTrait, HEAD);
 			break;
 
 			case "alduorite":
@@ -79,7 +76,7 @@ public class SetTinkerTraits {
 			break;
 
 			case "desichalkos":
-				material.addTrait(MetallurgyTinkerTraits.kingDiceTrait, EXTRA);
+
 			break;
 
 			case "deep_iron":

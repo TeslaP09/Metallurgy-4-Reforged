@@ -1195,7 +1195,9 @@ modifier.king_dice_trait.name=King Dice
 modifier.king_dice_trait.desc=Applies a random effect on your enemy
 
 modifier.explosive_trait.name=Explosive
-modifier.explosive_trait.desc=§oBrilliant!\n§rAll your attacks explode!
+modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
+modifier.devouring_trait.name=Devouring
+modifier.devouring_trait.desc=§oHangry!\n§rConsume your enemies after you defeat them.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe
