@@ -18,7 +18,7 @@ public class MetallurgyArmorTraits {
 	public static final AbstractArmorTrait stronglyKalendrite = new TraitStrongly(0);
 	public static final AbstractArmorTrait stronglyAmordrine = new TraitStrongly(1);
 	public static final AbstractArmorTrait jumpMaster = new TraitJumpMaster();
-	public static final AbstractArmorTrait resistance = new TraitResistence();
+	public static final AbstractArmorTrait resistance = new TraitResistance();
 	public static final AbstractArmorTrait deeply = new TraitDeeply();
 	public static final AbstractArmorTrait volcano = new TraitVolcano();
 	public static final AbstractArmorTrait foodly = new TraitFoodly();

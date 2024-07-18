@@ -1,5 +1,5 @@
 /*==============================================================================
- = Class: TraitResistence
+ = Class: TraitResistance
  = This class is part of Metallurgy 4: Reforged
  = Complete source code is available at https://github.com/Davoleo/Metallurgy-4-Reforged
  = This code is licensed under GNU GPLv3
@@ -17,9 +17,9 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent;
 
-public class TraitResistence extends AbstractArmorTrait implements IConarmMetallurgyTrait {
+public class TraitResistance extends AbstractArmorTrait implements IConarmMetallurgyTrait {
 
-	public TraitResistence()
+	public TraitResistance()
 	{
 		super("resistance", TextFormatting.GREEN);
 	}
