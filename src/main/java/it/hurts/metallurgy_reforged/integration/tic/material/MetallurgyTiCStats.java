@@ -36,7 +36,7 @@ public class MetallurgyTiCStats {
 		float attack = metal.getToolMaterial().getAttackDamage();
 		int harvestL = metal.getToolMaterial().getHarvestLevel();
 
-		return new HeadMaterialStats(durability / 2, speed, attack, harvestL);
+		return new HeadMaterialStats(durability / 2, speed, attack + 2, harvestL);
 	}
 
 	public static ExtraMaterialStats getExtraA(Metal metal)
@@ -61,7 +61,7 @@ public class MetallurgyTiCStats {
 
 		float drawspeed = (float) ((MAX_SPEED - metal.getToolMaterial().getEfficiency()) / 12.3);
 		float range = metal.getToolMaterial().getEfficiency() / 12;
-		float bonusdamage = metal.getToolMaterial().getAttackDamage() / 12;
+		float bonusdamage = metal.getToolMaterial().getAttackDamage() / 8;
 
 		return new BowMaterialStats(drawspeed, range, bonusdamage);
 	}
