@@ -44,8 +44,8 @@ public class SetTinkerTraits {
 				material.addTrait(aridiculous);
 			break;
 			case "ignatius":
-				material.addTrait(autosmelt, HEAD);
-				material.addTrait(superheat);
+				material.addTrait(superheat, HEAD);
+				material.addTrait(autosmelt);
 			break;
 			case "etherium":
 				addToEveryPart(material, MetallurgyTinkerTraits.lifeStealTrait);
