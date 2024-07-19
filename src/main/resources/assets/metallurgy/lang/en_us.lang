@@ -1200,6 +1200,8 @@ modifier.devouring_trait.name=Devouring
 modifier.devouring_trait.desc=§oHangry!\n§rConsume your enemies after you defeat them.
 modifier.ego_trait.name=Ego
 modifier.ego_trait.desc=§oYour ego even has its own gravitational pull!\n§rKilling a mob in one hit gives a temporary speed and strength boost.
+modifier.enderslayer_trait.name=Ender Slayer
+modifier.enderslayer_trait.desc=§oHated by all kinds of unimaginable horrors!\n§rDeal extra damage to end mobs, and also while in The End.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe
