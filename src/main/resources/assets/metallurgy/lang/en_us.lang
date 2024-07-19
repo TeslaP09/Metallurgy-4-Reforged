@@ -1198,6 +1198,8 @@ modifier.explosive_trait.name=Explosive
 modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
 modifier.devouring_trait.name=Devouring
 modifier.devouring_trait.desc=§oHangry!\n§rConsume your enemies after you defeat them.
+modifier.ego_trait.name=Ego
+modifier.ego_trait.desc=§oYour ego even has its own gravitational pull!\n§rKilling a mob in one hit gives a temporary speed and strength boost.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

@@ -26,63 +26,130 @@ public class SetTinkerTraits {
 		switch (metal.getStats().getName())
 		{
 			//		TraitSuperheat = Increased damage to enemies that are on fire
-
-			case "midasium":
-				addToEveryPart(material, writable2);
-
-				if (GeneralConfig.enableDuplicationTrait)
-					addToEveryPart(material, MetallurgyTinkerTraits.duplicaitonTrait);
+			
+			case "amordrine":
+				material.addTrait(holy, HEAD);
+				addToEveryPart(material, dense);
 			break;
-
-			case "ignatius":
+			case "haderoth":
+				material.addTrait(dense, HEAD);
+				addToEveryPart(material, duritos);
 			break;
-
+			case "platinum":
+				material.addTrait(holy, HEAD);
+				material.addTrait(dense);
+			break;
 			case "vulcanite":
 				material.addTrait(MetallurgyTinkerTraits.explosiveTrait, HEAD);
 				material.addTrait(aridiculous);
 			break;
-
-			case "eximite":
-				material.addTrait(enderference, HEAD);
+			case "ignatius":
+				material.addTrait(autosmelt, HEAD);
+				material.addTrait(superheat);
 			break;
-
-			case "vyroxeres":
-				addToEveryPart(material, poisonous);
+			case "etherium":
+				addToEveryPart(material, MetallurgyTinkerTraits.lifeStealTrait);
 			break;
-
-			case "mithril":
-				//				TODO Glowing Modifiers
+			case "quicksilver":
+				material.addTrait(momentum, HEAD);
+				material.addTrait(lightweight);
 			break;
-
-			case "damascus_steel":
+			case "brass":
+				addToEveryPart(material, writable);
+			break;
+			case "astral_silver":
 				material.addTrait(dense, HEAD);
-				addToEveryPart(material, duritos);
+				material.addTrait(unnatural);
 			break;
-
-			case "shadow_iron":
+			case "hepatizon":
+				material.addTrait(dense, HEAD);
 			break;
-
+			case "eximite":
+				material.addTrait(dense, HEAD);
+				material.addTrait(enderference);
+			break;
 			case "sanguinite":
 				material.addTrait(MetallurgyTinkerTraits.devouringTrait, HEAD);
 				material.addTrait(insatiable);
 			break;
-
-			case "tartarite":
-			break;
-
-			case "alduorite":
-				material.addTrait(TinkerTraits.unnatural, EXTRA);
-				material.addTrait(TinkerTraits.unnatural, HEAD);
-			break;
-
 			case "desichalkos":
-
+				material.addTrait(dense, HEAD);
+				material.addTrait(dense);
 			break;
-
+			case "celenegil":
+				material.addTrait(MetallurgyTinkerTraits.egoTrait, HEAD);
+				material.addTrait(coldblooded);
+			break;
+			case "shadow_iron":
+				addToEveryPart(material, dense);
+			break;
+			case "mithril":
+				material.addTrait(dense, HEAD);
+				material.addTrait(coldblooded);
+				addToEveryPart(material, writable2);
+			break;
+			case "carmot":
+				addToEveryPart(material, dense);
+			break;
+			case "ceruclase":
+				addToEveryPart(material, dense);
+			break;
 			case "deep_iron":
+				material.addTrait(aquadynamic, HEAD);
 				addToEveryPart(material, MetallurgyTinkerTraits.opistognathusTrait);
 			break;
-
+			case "angmallen":
+				addToEveryPart(material, dense);
+			break;
+			case "kalendrite":
+				addToEveryPart(material, dense);
+			break;
+			case "damascus_steel":
+				material.addTrait(sharp, HEAD);
+				material.addTrait(stiff);
+				addToEveryPart(material, established);
+			break;
+			case "prometheum":
+				addToEveryPart(material, ecological);
+			break;
+			case "adamantine":
+				addToEveryPart(material, dense);
+			break;
+			case "tartarite":
+				addToEveryPart(material, writable2);
+			break;
+			case "atlarus":
+				addToEveryPart(material, dense);
+			break;
+			case "vyroxeres":
+				addToEveryPart(material, poisonous);
+			break;
+			case "black_steel":
+				addToEveryPart(material, dense);
+			break;
+			case "osmium":
+			break;
+			case "oureclase":
+				addToEveryPart(material, coldblooded);
+			break;
+			case "inolashite":
+				addToEveryPart(material, dense);
+			break;
+			case "orichalcum":
+				addToEveryPart(material, dense);
+			break;
+			case "shadow_steel":
+				addToEveryPart(material, dense);
+			break;
+			case "midasium":
+				material.addTrait(dense, HEAD);
+				
+				if (GeneralConfig.enableDuplicationTrait)
+					material.addTrait(MetallurgyTinkerTraits.duplicationTrait);
+			break;
+			case "krik":
+				addToEveryPart(material, dense);
+			break;
 			default:
 		}
 	}

@@ -23,11 +23,12 @@ import slimeknights.tconstruct.library.utils.TagUtil;
 public class MetallurgyTinkerTraits {
 
 	public static final AbstractTrait lifeStealTrait = new MetallurgyTraitLifeSteal();
-	public static final AbstractTrait duplicaitonTrait = new MetallurgyTraitDuplication();
+	public static final AbstractTrait duplicationTrait = new MetallurgyTraitDuplication();
 	public static final AbstractTrait opistognathusTrait = new MetallurgyTraitOpistognathus();
 	
 	public static final AbstractTrait explosiveTrait = new MetallurgyTraitExplosive();
 	public static final AbstractTrait devouringTrait = new MetallurgyTraitDevouring();
+	public static final AbstractTrait egoTrait = new MetallurgyTraitEgo();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
