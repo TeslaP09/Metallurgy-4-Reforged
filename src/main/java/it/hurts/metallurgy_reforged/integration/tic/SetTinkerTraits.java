@@ -65,7 +65,7 @@ public class SetTinkerTraits {
 				material.addTrait(dense, HEAD);
 			break;
 			case "eximite":
-				material.addTrait(dense, HEAD);
+				material.addTrait(MetallurgyTinkerTraits.enderSlayerTrait, HEAD);
 				material.addTrait(enderference);
 			break;
 			case "sanguinite":

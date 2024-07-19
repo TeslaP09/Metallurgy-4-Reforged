@@ -21,7 +21,7 @@ public class MetallurgyTraitEnderSlayer extends AbstractTrait implements IMetall
 
 	public MetallurgyTraitEnderSlayer()
 	{
-		super("decay_trait", 0xFF575000);
+		super("enderslayer_trait", 0xFF575000);
 		this.register("metallurgy.trait.enderslayer", "metallurgy.trait.enderslayer.tooltip");
 	}
 

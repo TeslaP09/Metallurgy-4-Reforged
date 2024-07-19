@@ -29,6 +29,7 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait explosiveTrait = new MetallurgyTraitExplosive();
 	public static final AbstractTrait devouringTrait = new MetallurgyTraitDevouring();
 	public static final AbstractTrait egoTrait = new MetallurgyTraitEgo();
+	public static final AbstractTrait enderSlayerTrait = new MetallurgyTraitEnderSlayer();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
