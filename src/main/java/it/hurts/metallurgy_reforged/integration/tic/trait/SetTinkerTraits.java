@@ -92,7 +92,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, dense);
 			break;
 			case "ceruclase":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.coldTrait);
 			break;
 			case "deep_iron":
 				material.addTrait(aquadynamic, HEAD);

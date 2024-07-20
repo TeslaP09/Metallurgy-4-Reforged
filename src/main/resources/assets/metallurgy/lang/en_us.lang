@@ -1179,20 +1179,12 @@ metallurgy.subtitle.metal_detector_ping=Metal Detector Scans the Area
 metallurgy.subtitle.metal_detector_beep=Metal Detector Beeps
 
 #Tinkers' Construct Traits
-modifier.obscure_trait.name=Obscure
-modifier.obscure_trait.desc=Blinds your enemy for some time
 modifier.opistognathus_trait.name=Opistognathus
 modifier.opistognathus_trait.desc=Increase attack/mining speed in water
-modifier.vulcan_trait.name=Volcanic
-modifier.vulcan_trait.desc=Sets your enemy on fire for a certain amount of time (depending on the level of the trait)
 modifier.duplication_trait.name=Duplication
 modifier.duplication_trait.desc=Has a chance to duplicate drops
 modifier.life_steal_trait.name=Life Steal
 modifier.life_steal_trait.desc=Has a Luck based chance to heal 0.4x of the dealt damage
-modifier.wither_trait.name=Wither
-modifier.wither_trait.desc=Applies wither effect on your enemy
-modifier.king_dice_trait.name=King Dice
-modifier.king_dice_trait.desc=Applies a random effect on your enemy
 
 modifier.explosive_trait.name=Explosive
 modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
@@ -1202,6 +1194,10 @@ modifier.ego_trait.name=Ego
 modifier.ego_trait.desc=§oYour ego even has its own gravitational pull!\n§rKilling a mob in one hit gives a temporary speed and strength boost.
 modifier.enderslayer_trait.name=Ender Slayer
 modifier.enderslayer_trait.desc=§oHated by all kinds of unimaginable horrors!\n§rDeal extra damage to end mobs, and also while in The End.
+modifier.precision_trait.name=Precision
+modifier.precision_trait.desc=§oPow! right in the kisser!\n§rCrits deal x2.0 dmg instead of x1.5.
+modifier.cold_trait.name=Cold
+modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe
