@@ -17,6 +17,7 @@ import it.hurts.metallurgy_reforged.config.GadgetsConfig;
 import it.hurts.metallurgy_reforged.config.GeneralConfig;
 import it.hurts.metallurgy_reforged.fluid.ModFluids;
 import it.hurts.metallurgy_reforged.integration.tic.material.TiCMaterial;
+import it.hurts.metallurgy_reforged.integration.tic.trait.SetTinkerTraits;
 import it.hurts.metallurgy_reforged.item.ItemMetal;
 import it.hurts.metallurgy_reforged.item.ModItems;
 import it.hurts.metallurgy_reforged.material.Metal;

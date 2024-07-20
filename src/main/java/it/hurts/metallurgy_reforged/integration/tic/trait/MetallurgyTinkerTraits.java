@@ -7,9 +7,8 @@
  = Copyright (c) 2018-2020.
  =============================================================================*/
 
-package it.hurts.metallurgy_reforged.integration.tic;
+package it.hurts.metallurgy_reforged.integration.tic.trait;
 
-import it.hurts.metallurgy_reforged.integration.tic.trait.*;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NBTTagList;
@@ -30,6 +29,7 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait devouringTrait = new MetallurgyTraitDevouring();
 	public static final AbstractTrait egoTrait = new MetallurgyTraitEgo();
 	public static final AbstractTrait enderSlayerTrait = new MetallurgyTraitEnderSlayer();
+	public static final AbstractTrait precisionTrait = new MetallurgyTraitPrecision();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{

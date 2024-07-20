@@ -7,7 +7,7 @@
  = Copyright (c) 2018-2020.
  =============================================================================*/
 
-package it.hurts.metallurgy_reforged.integration.tic;
+package it.hurts.metallurgy_reforged.integration.tic.trait;
 
 import it.hurts.metallurgy_reforged.config.GeneralConfig;
 import it.hurts.metallurgy_reforged.material.Metal;
@@ -81,7 +81,7 @@ public class SetTinkerTraits {
 				material.addTrait(coldblooded);
 			break;
 			case "shadow_iron":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.precisionTrait);
 			break;
 			case "mithril":
 				material.addTrait(dense, HEAD);

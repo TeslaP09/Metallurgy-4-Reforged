@@ -9,7 +9,10 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
-import it.hurts.metallurgy_reforged.integration.tic.MetallurgyTinkerTraits;
+import java.util.UUID;
+
+import javax.annotation.Nullable;
+
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -21,9 +24,6 @@ import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
-
-import javax.annotation.Nullable;
-import java.util.UUID;
 
 public class MetallurgyTraitOpistognathus extends AbstractTrait implements IMetallurgyTrait {
 
