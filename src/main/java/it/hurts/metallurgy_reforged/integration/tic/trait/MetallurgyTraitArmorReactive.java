@@ -10,7 +10,9 @@
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
 import it.hurts.metallurgy_reforged.util.Utils;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.item.ItemStack;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 import javax.annotation.Nullable;
@@ -23,7 +25,12 @@ public class MetallurgyTraitArmorReactive extends AbstractTrait implements IMeta
 		this.register("metallurgy.trait.armorreactive", "metallurgy.trait.armorreactive.tooltip");
 	}
 
-
+	 public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
+		 if (target.getEntityAttribute(SharedMonsterAttributes.ARMOR).getAttributeValue() > 10) {
+			 return newDamage * 1.75f;
+		 }
+		 return newDamage;
+	 }
 
 	@Override
 	public void register(String name, @Nullable String tooltip)

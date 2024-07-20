@@ -10,7 +10,10 @@
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
 import it.hurts.metallurgy_reforged.util.Utils;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.init.MobEffects;
+import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 import javax.annotation.Nullable;
@@ -19,14 +22,14 @@ public class MetallurgyTraitCold extends AbstractTrait implements IMetallurgyTra
 
 	public MetallurgyTraitCold()
 	{
-		super("decay_trait", 0xFF575000);
-		this.register("metallurgy.trait.decay", "metallurgy.trait.decay.tooltip");
+		super("cold_trait", 0xFF575000);
+		this.register("metallurgy.trait.cold", "metallurgy.trait.cold.tooltip");
 	}
 
 	@Override
-	public void applyEffect(NBTTagCompound rootCompound, NBTTagCompound modifierTag)
+	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) 
 	{
-		super.applyEffect(rootCompound, modifierTag);
+		target.addPotionEffect(new PotionEffect(MobEffects.SLOWNESS, 200, 1, false, false));
 	}
 
 	@Override
