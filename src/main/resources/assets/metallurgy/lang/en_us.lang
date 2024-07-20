@@ -1201,7 +1201,7 @@ modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness
 modifier.armorreactive_trait.name=Armor Reactivity
 modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
 modifier.serialhealer_trait.name=Serial Healer
-modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 10% of the max hp of defeated enemies.
+modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

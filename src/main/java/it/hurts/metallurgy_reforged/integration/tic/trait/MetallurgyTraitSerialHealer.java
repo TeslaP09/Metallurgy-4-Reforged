@@ -28,7 +28,7 @@ public class MetallurgyTraitSerialHealer extends AbstractTrait implements IMetal
 	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) 
 	{
 		if (target.getHealth() <= 0) {
-			player.heal(target.getMaxHealth() * 0.1f);
+			player.heal(target.getMaxHealth() * 0.2f);
 		}
 	}
 
