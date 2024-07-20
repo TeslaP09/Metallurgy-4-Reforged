@@ -1198,6 +1198,8 @@ modifier.precision_trait.name=Precision
 modifier.precision_trait.desc=§oPow! right in the kisser!\n§rCrits deal x2.0 dmg instead of x1.5.
 modifier.cold_trait.name=Cold
 modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness
+modifier.armorreactive_trait.name=Armor Reactivity
+modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

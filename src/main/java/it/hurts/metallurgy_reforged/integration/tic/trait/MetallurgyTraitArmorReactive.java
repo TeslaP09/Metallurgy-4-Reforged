@@ -15,19 +15,15 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 import javax.annotation.Nullable;
 
-public class MetallurgyTraitArmorReactivity extends AbstractTrait implements IMetallurgyTrait {
+public class MetallurgyTraitArmorReactive extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitArmorReactivity()
+	public MetallurgyTraitArmorReactive()
 	{
-		super("decay_trait", 0xFF575000);
-		this.register("metallurgy.trait.decay", "metallurgy.trait.decay.tooltip");
+		super("armorreactive_trait", 0xFF575000);
+		this.register("metallurgy.trait.armorreactive", "metallurgy.trait.armorreactive.tooltip");
 	}
 
-	@Override
-	public void applyEffect(NBTTagCompound rootCompound, NBTTagCompound modifierTag)
-	{
-		super.applyEffect(rootCompound, modifierTag);
-	}
+
 
 	@Override
 	public void register(String name, @Nullable String tooltip)
