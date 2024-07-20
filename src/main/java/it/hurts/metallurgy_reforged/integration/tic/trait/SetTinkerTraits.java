@@ -99,10 +99,10 @@ public class SetTinkerTraits {
 				addToEveryPart(material, MetallurgyTinkerTraits.opistognathusTrait);
 			break;
 			case "angmallen":
-				addToEveryPart(material, MetallurgyTinkerTraits.armorReactive);
+				addToEveryPart(material, MetallurgyTinkerTraits.armorReactiveTrait);
 			break;
 			case "kalendrite":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.serialHealerTrait);
 			break;
 			case "damascus_steel":
 				material.addTrait(sharp, HEAD);

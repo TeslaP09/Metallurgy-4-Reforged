@@ -1180,11 +1180,11 @@ metallurgy.subtitle.metal_detector_beep=Metal Detector Beeps
 
 #Tinkers' Construct Traits
 modifier.opistognathus_trait.name=Opistognathus
-modifier.opistognathus_trait.desc=Increase attack/mining speed in water
+modifier.opistognathus_trait.desc=§oAquaman!\n§rIncrease attack/mining speed in water
 modifier.duplication_trait.name=Duplication
-modifier.duplication_trait.desc=Has a chance to duplicate drops
+modifier.duplication_trait.desc=§ohey guys i did a bit of off camera mining\n§rHas a chance to duplicate drops
 modifier.life_steal_trait.name=Life Steal
-modifier.life_steal_trait.desc=Has a Luck based chance to heal 0.4x of the dealt damage
+modifier.life_steal_trait.desc=§oSiphon their life to yours!\n§rHas a Luck based chance to heal 0.4x of the dealt damage
 
 modifier.explosive_trait.name=Explosive
 modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
@@ -1200,6 +1200,8 @@ modifier.cold_trait.name=Cold
 modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness
 modifier.armorreactive_trait.name=Armor Reactivity
 modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
+modifier.serialhealer_trait.name=Serial Healer
+modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 10% of the max hp of defeated enemies.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe
