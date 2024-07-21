@@ -15,6 +15,7 @@ import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.library.utils.ToolHelper;
@@ -27,15 +28,24 @@ public class MetallurgyTraitPhoenix extends AbstractTrait implements IMetallurgy
 		this.register("metallurgy.trait.phoenix", "metallurgy.trait.phoenix.tooltip");
 	}
 
-	@Override
-	public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected)
-	{
-		if (!world.isRemote && Math.random() > 0.5 && ToolHelper.isBroken(tool))
-		{
-			ToolHelper.healTool(tool, 100, (EntityLivingBase) entity);
-			ToolHelper.unbreakTool(tool);
-		}
-	}
+	  @Override
+	  public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected) {
+	    NBTTagCompound comp = tool.getOrCreateSubCompound(this.getModifierIdentifier());
+	    if (comp.getBoolean("AttemptedRepair") || world.isRemote || !ToolHelper.isBroken(tool)) {
+	      return;
+	    }
+	    if (Math.random() > 0.5) {
+	      //repair and set dura
+	    } else {
+	      comp.setBoolean("AttemptedRepair", true);
+	    }
+	  }
+
+	  @Override
+	  public void onRepair(ItemStack tool, int amount) {
+	    NBTTagCompound comp = tool.getOrCreateSubCompound(this.getModifierIdentifier());
+	    comp.setBoolean("AttemptedRepair", false);
+	  }
 
 	@Override
 	public void register(String name, @Nullable String tooltip) 

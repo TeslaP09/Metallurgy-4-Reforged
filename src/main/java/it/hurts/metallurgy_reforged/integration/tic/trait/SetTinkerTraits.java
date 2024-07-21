@@ -139,7 +139,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, MetallurgyTinkerTraits.bloodthirstyTrait);
 			break;
 			case "shadow_steel":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.umbralLucencyTrait);
 			break;
 			case "midasium":
 				material.addTrait(dense, HEAD);

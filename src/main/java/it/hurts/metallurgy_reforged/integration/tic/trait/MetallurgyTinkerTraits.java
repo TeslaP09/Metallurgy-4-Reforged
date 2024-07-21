@@ -35,6 +35,7 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait serialHealerTrait = new MetallurgyTraitSerialHealer();
 	public static final AbstractTrait phoenixTrait = new MetallurgyTraitPhoenix();
 	public static final AbstractTrait bloodthirstyTrait = new MetallurgyTraitBloodthirsty();
+	public static final AbstractTrait umbralLucencyTrait = new MetallurgyTraitUmbralLucency();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
