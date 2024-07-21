@@ -32,7 +32,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, dense);
 			break;
 			case "haderoth":
-				material.addTrait(dense, HEAD);
+				material.addTrait(MetallurgyTinkerTraits.adaptableTrait, HEAD);
 				addToEveryPart(material, duritos);
 			break;
 			case "platinum":

@@ -9,6 +9,8 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
+import javax.annotation.Nullable;
+
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,29 +18,23 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.FoodStats;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
-import javax.annotation.Nullable;
-
 public class MetallurgyTraitDevouring extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitDevouring()
-	{
+	public MetallurgyTraitDevouring() {
 		super("devouring_trait", 0xFF575000);
 		this.register("metallurgy.trait.devouring", "metallurgy.trait.devouring.tooltip");
 	}
 
 	@Override
-	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit)
-	{
-        if (player instanceof EntityPlayer && target.getHealth() <= 0) 
-        	{
-            FoodStats foodStats = ((EntityPlayer) player).getFoodStats();
-            foodStats.addStats(1, 0.5f);
-        }
+	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) {
+		if (player instanceof EntityPlayer && target.getHealth() <= 0) {
+			FoodStats foodStats = ((EntityPlayer) player).getFoodStats();
+			foodStats.addStats(1, 0.5f);
+		}
 	}
-	
+
 	@Override
-	public void register(String name, @Nullable String tooltip)
-	{
+	public void register(String name, @Nullable String tooltip) {
 		Utils.localizeEscapingCustomSequences(String.format(LOC_Name, name));
 		if (tooltip != null)
 			Utils.localizeEscapingCustomSequences(String.format(LOC_Name, tooltip));

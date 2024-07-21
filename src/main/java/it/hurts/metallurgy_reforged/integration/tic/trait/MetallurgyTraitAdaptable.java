@@ -11,26 +11,33 @@ package it.hurts.metallurgy_reforged.integration.tic.trait;
 
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 import javax.annotation.Nullable;
 
-public class MetallurgyTraitArmorReactive extends AbstractTrait implements IMetallurgyTrait {
+public class MetallurgyTraitAdaptable extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitArmorReactive() {
-		super("armorreactive_trait", 0xFF575000);
-		this.register("metallurgy.trait.armorreactive", "metallurgy.trait.armorreactive.tooltip");
+	public MetallurgyTraitAdaptable() 
+	{
+		super("adaptable_trait", 0xFF575000);
+		this.register("metallurgy.trait.adaptable", "metallurgy.trait.adaptable.tooltip");
 	}
 
-	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) 
-	{
-		if (target.getEntityAttribute(SharedMonsterAttributes.ARMOR).getAttributeValue() > 10) 
-		{
-			return newDamage * 1.6f;
+	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
+		if (tool.getItemDamage() <= (tool.getMaxDamage() * 0.2)) {
+			return newDamage * 1.25f;
 		}
 		return newDamage;
+	}
+
+	@Override
+	public void miningSpeed(ItemStack tool, PlayerEvent.BreakSpeed event) 
+	{
+		if (tool.getItemDamage() <= (tool.getMaxDamage() * 0.2)) {
+			event.setNewSpeed(event.getNewSpeed() * 1.25f);
+		}
 	}
 
 	@Override

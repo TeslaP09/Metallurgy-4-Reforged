@@ -1180,11 +1180,11 @@ metallurgy.subtitle.metal_detector_beep=Metal Detector Beeps
 
 #Tinkers' Construct Traits
 modifier.opistognathus_trait.name=Opistognathus
-modifier.opistognathus_trait.desc=§oAquaman!\n§rIncrease attack/mining speed in water
+modifier.opistognathus_trait.desc=§oAquaman!\n§rIncrease attack/mining speed in water.
 modifier.duplication_trait.name=Duplication
-modifier.duplication_trait.desc=§ohey guys i did a bit of off camera mining\n§rHas a chance to duplicate drops
+modifier.duplication_trait.desc=§ohey guys i did a bit of off camera mining\n§rHas a chance to duplicate drops.
 modifier.life_steal_trait.name=Life Steal
-modifier.life_steal_trait.desc=§oSiphon their life to yours!\n§rHas a Luck based chance to heal 0.4x of the dealt damage
+modifier.life_steal_trait.desc=§oSiphon their life to yours!\n§rHas a Luck based chance to heal 0.4x of the dealt damage.
 
 modifier.explosive_trait.name=Explosive
 modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
@@ -1197,11 +1197,15 @@ modifier.enderslayer_trait.desc=§oHated by all kinds of unimaginable horrors!\n
 modifier.precision_trait.name=Precision
 modifier.precision_trait.desc=§oPow! right in the kisser!\n§rCrits deal x2.0 dmg instead of x1.5.
 modifier.cold_trait.name=Cold
-modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness
+modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness.
 modifier.armorreactive_trait.name=Armor Reactivity
 modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
 modifier.serialhealer_trait.name=Serial Healer
 modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
+modifier.adaptable_trait.name=Adaptable
+modifier.adaptable_trait.desc=§oIf they knock you down, get back up\n§rBecomes more efficient while under 20% durability.
+modifier.umbrallucency.name=Umbral Lucency
+modifier.umbrallucency.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

@@ -33,6 +33,7 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait coldTrait = new MetallurgyTraitCold();
 	public static final AbstractTrait armorReactiveTrait = new MetallurgyTraitArmorReactive();
 	public static final AbstractTrait serialHealerTrait = new MetallurgyTraitSerialHealer();
+	public static final AbstractTrait adaptableTrait = new MetallurgyTraitAdaptable();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
