@@ -1202,10 +1202,12 @@ modifier.armorreactive_trait.name=Armor Reactivity
 modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
 modifier.serialhealer_trait.name=Serial Healer
 modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
-modifier.adaptable_trait.name=Adaptable
-modifier.adaptable_trait.desc=§oIf they knock you down, get back up\n§rBecomes more efficient while under 20% durability.
+modifier.phoenix_trait.name=Phoenix
+modifier.phoenix_trait.desc=§oIf they knock you down, get back up\n§r50% chance when tool breaks to revive with 100 durability.
 modifier.umbrallucency.name=Umbral Lucency
 modifier.umbrallucency.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
+modifier.bloodthirsty.name=Bloodthirsty
+modifier.bloodthirsty.desc=§ommm... scrumptious...\n§rDefeated enemies repair your tool.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

@@ -32,7 +32,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, dense);
 			break;
 			case "haderoth":
-				material.addTrait(MetallurgyTinkerTraits.adaptableTrait, HEAD);
+				material.addTrait(MetallurgyTinkerTraits.phoenixTrait, HEAD);
 				addToEveryPart(material, duritos);
 			break;
 			case "platinum":
@@ -136,7 +136,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, dense);
 			break;
 			case "orichalcum":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.bloodthirstyTrait);
 			break;
 			case "shadow_steel":
 				addToEveryPart(material, dense);

@@ -9,34 +9,31 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
-import it.hurts.metallurgy_reforged.util.Utils;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import slimeknights.tconstruct.library.traits.AbstractTrait;
-
 import javax.annotation.Nullable;
 
-public class MetallurgyTraitAdaptable extends AbstractTrait implements IMetallurgyTrait {
+import it.hurts.metallurgy_reforged.util.Utils;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+import slimeknights.tconstruct.library.traits.AbstractTrait;
+import slimeknights.tconstruct.library.utils.ToolHelper;
 
-	public MetallurgyTraitAdaptable() 
+public class MetallurgyTraitPhoenix extends AbstractTrait implements IMetallurgyTrait {
+
+	public MetallurgyTraitPhoenix() 
 	{
-		super("adaptable_trait", 0xFF575000);
-		this.register("metallurgy.trait.adaptable", "metallurgy.trait.adaptable.tooltip");
-	}
-
-	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
-		if (tool.getItemDamage() <= (tool.getMaxDamage() * 0.2)) {
-			return newDamage * 1.25f;
-		}
-		return newDamage;
+		super("phoenix_trait", 0xFF575000);
+		this.register("metallurgy.trait.phoenix", "metallurgy.trait.phoenix.tooltip");
 	}
 
 	@Override
-	public void miningSpeed(ItemStack tool, PlayerEvent.BreakSpeed event) 
+	public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected)
 	{
-		if (tool.getItemDamage() <= (tool.getMaxDamage() * 0.2)) {
-			event.setNewSpeed(event.getNewSpeed() * 1.25f);
+		if (!world.isRemote && Math.random() > 0.5 && ToolHelper.isBroken(tool))
+		{
+			ToolHelper.healTool(tool, 100, (EntityLivingBase) entity);
+			ToolHelper.unbreakTool(tool);
 		}
 	}
 
