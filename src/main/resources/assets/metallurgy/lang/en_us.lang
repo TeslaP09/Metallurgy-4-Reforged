@@ -1204,10 +1204,10 @@ modifier.serialhealer_trait.name=Serial Healer
 modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
 modifier.phoenix_trait.name=Phoenix
 modifier.phoenix_trait.desc=§oIf they knock you down, get back up\n§r50% chance when tool breaks to revive with 100 durability.
-modifier.umbrallucency.name=Umbral Lucency
-modifier.umbrallucency.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
-modifier.bloodthirsty.name=Bloodthirsty
-modifier.bloodthirsty.desc=§ommm... scrumptious...\n§rDefeated enemies repair your tool.
+modifier.umbrallucency_trait.name=Umbral Lucency
+modifier.umbrallucency_trait.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
+modifier.bloodthirsty_trait.name=Bloodthirsty
+modifier.bloodthirsty_trait.desc=§ommm... scrumptious...\n§rDefeated enemies repair your tool.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

@@ -32,11 +32,15 @@ public class MetallurgyTraitPhoenix extends AbstractTrait implements IMetallurgy
 	  public void onUpdate(ItemStack tool, World world, Entity entity, int itemSlot, boolean isSelected) {
 	    NBTTagCompound comp = tool.getOrCreateSubCompound(this.getModifierIdentifier());
 	    if (comp.getBoolean("AttemptedRepair") || world.isRemote || !ToolHelper.isBroken(tool)) {
-	      return;
+	    	return;
 	    }
 	    if (Math.random() > 0.5) {
 	      //repair and set dura
+	    	System.out.println("repair chance succeeded!");
+	    	ToolHelper.unbreakTool(tool);
+	    	ToolHelper.healTool(tool, 100, (EntityLivingBase) entity);
 	    } else {
+	    	System.out.println("repair chance failed!");
 	      comp.setBoolean("AttemptedRepair", true);
 	    }
 	  }

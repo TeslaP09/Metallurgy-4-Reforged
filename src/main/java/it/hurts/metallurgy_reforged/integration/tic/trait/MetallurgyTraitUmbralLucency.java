@@ -21,6 +21,8 @@ import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.common.MinecraftForge;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 public class MetallurgyTraitUmbralLucency extends AbstractTrait implements IMetallurgyTrait {
@@ -28,27 +30,37 @@ public class MetallurgyTraitUmbralLucency extends AbstractTrait implements IMeta
 	public MetallurgyTraitUmbralLucency() {
 		super("umbrallucency_trait", 0xFF575000);
 		this.register("metallurgy.trait.umbrallucency", "metallurgy.trait.umbrallucency.tooltip");
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static final UUID ATK_SPEED = UUID.fromString("0190d367-9c2d-737b-9429-e968d9e13441");
 
-	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage,
-			boolean isCritical) {
-		if (target.world.getLight(target.getPosition()) >= 10) {
+	@Override
+	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical)
+	{
+		if (player.world.getLight(player.getPosition()) >= 10) {
 			return newDamage * 1.25f;
 		}
 		return newDamage;
 	}
 
 	@Override
-	public void getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack,
-			Multimap<String, AttributeModifier> attributeMap) {
-		if (slot != EntityEquipmentSlot.MAINHAND)
-			return;
-		attributeMap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-				new AttributeModifier(ATK_SPEED, "ATK Speed Buff", 1.4, 2));
+	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit)
+	{
+		NBTTagCompound comp = tool.getOrCreateSubCompound(this.getModifierIdentifier());
+		comp.setInteger("Light", player.world.getLight(player.getPosition()));
 	}
-
+	
+	@Override
+	public void getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack, Multimap<String, AttributeModifier> attributeMap)
+	{
+		NBTTagCompound comp = stack.getOrCreateSubCompound(this.getModifierIdentifier());
+		if (slot != EntityEquipmentSlot.MAINHAND || comp.getInteger("Light") > 5)
+            return;
+        attributeMap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
+                new AttributeModifier(ATK_SPEED, "ATK Speed Buff", 0.4, 2));
+	}
+	
 	@Override
 	public void register(String name, @Nullable String tooltip) {
 		Utils.localizeEscapingCustomSequences(String.format(LOC_Name, name));
