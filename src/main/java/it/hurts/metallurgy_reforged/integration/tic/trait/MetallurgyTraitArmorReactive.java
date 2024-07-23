@@ -28,7 +28,7 @@ public class MetallurgyTraitArmorReactive extends AbstractTrait implements IMeta
 	{
 		if (target.getEntityAttribute(SharedMonsterAttributes.ARMOR).getAttributeValue() > 10) 
 		{
-			return newDamage * 1.6f;
+			return newDamage * 1.3f;
 		}
 		return newDamage;
 	}

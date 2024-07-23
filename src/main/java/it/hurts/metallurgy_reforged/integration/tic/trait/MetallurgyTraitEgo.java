@@ -46,8 +46,8 @@ public class MetallurgyTraitEgo extends AbstractTrait implements IMetallurgyTrai
 			
 			if (target.getHealth() <= 0 && (target.getTags().contains("ego_fullhp")))
 			{
-				player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 1, false, false));
-				player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 200, 1, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 200, 0, false, false));
+				player.addPotionEffect(new PotionEffect(MobEffects.SPEED, 200, 0, false, false));
 			    }
 		 target.addTag("ego_hashit");
 		}

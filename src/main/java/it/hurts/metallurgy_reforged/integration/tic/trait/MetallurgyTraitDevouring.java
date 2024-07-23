@@ -27,7 +27,7 @@ public class MetallurgyTraitDevouring extends AbstractTrait implements IMetallur
 
 	@Override
 	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) {
-		if (player instanceof EntityPlayer && target.getHealth() <= 0) {
+		if (player instanceof EntityPlayer && target.getHealth() <= 0 && Math.random() < 0.5) {
 			FoodStats foodStats = ((EntityPlayer) player).getFoodStats();
 			foodStats.addStats(1, 0.5f);
 		}

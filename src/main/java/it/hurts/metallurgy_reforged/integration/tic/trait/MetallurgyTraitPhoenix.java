@@ -35,12 +35,9 @@ public class MetallurgyTraitPhoenix extends AbstractTrait implements IMetallurgy
 	    	return;
 	    }
 	    if (Math.random() > 0.5) {
-	      //repair and set dura
-	    	System.out.println("repair chance succeeded!");
 	    	ToolHelper.unbreakTool(tool);
 	    	ToolHelper.healTool(tool, 100, (EntityLivingBase) entity);
 	    } else {
-	    	System.out.println("repair chance failed!");
 	      comp.setBoolean("AttemptedRepair", true);
 	    }
 	  }
