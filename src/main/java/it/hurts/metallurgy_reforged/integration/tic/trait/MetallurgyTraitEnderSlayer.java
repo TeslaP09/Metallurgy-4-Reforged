@@ -27,7 +27,7 @@ public class MetallurgyTraitEnderSlayer extends AbstractTrait implements IMetall
 
 	 @Override
 	 public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
-		if (EntityList.getKey(target).toString().equals("minecraft:enderman") || EntityList.getKey(target).toString().equals("minecraft:shulker") || EntityList.getKey(target).toString().equals("minecraft:ender_dragon"))
+		if (EntityList.getKey(target).toString().equals("minecraft:enderman") || EntityList.getKey(target).toString().equals("minecraft:endermite") || EntityList.getKey(target).toString().equals("minecraft:shulker") || EntityList.getKey(target).toString().equals("minecraft:ender_dragon"))
 			return (newDamage * 1.3f);
 		else if (target.world.provider.getDimension() == 1)
 			return (newDamage * 1.3f);
