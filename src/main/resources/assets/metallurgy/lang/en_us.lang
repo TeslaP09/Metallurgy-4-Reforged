@@ -1208,6 +1208,8 @@ modifier.umbrallucency_trait.name=Umbral Lucency
 modifier.umbrallucency_trait.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
 modifier.bloodthirsty_trait.name=Bloodthirsty
 modifier.bloodthirsty_trait.desc=§ommm... scrumptious...\n§rDefeated enemies repair your tool.
+modifier.starborn_trait.name=Starborn
+modifier.starborn_trait.desc=§oSPAAAAAAACEEE!!\n§rDeal bonus damage the higher you are in the sky (max of x1.25 damage), effect boosted at night or in the end.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

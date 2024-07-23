@@ -36,6 +36,7 @@ public class MetallurgyTinkerTraits {
 	public static final AbstractTrait phoenixTrait = new MetallurgyTraitPhoenix();
 	public static final AbstractTrait bloodthirstyTrait = new MetallurgyTraitBloodthirsty();
 	public static final AbstractTrait umbralLucencyTrait = new MetallurgyTraitUmbralLucency();
+	public static final AbstractTrait starbornTrait = new MetallurgyTraitStarborn();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{
