@@ -58,7 +58,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, writable);
 			break;
 			case "astral_silver":
-				material.addTrait(dense, HEAD);
+				material.addTrait(MetallurgyTinkerTraits.starbornTrait, HEAD);
 				material.addTrait(unnatural);
 			break;
 			case "hepatizon":
