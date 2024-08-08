@@ -24,10 +24,10 @@ public class SetArmorTraits {
 				addToEveryPart(material, MetallurgyArmorTraits.quickly);
 				break;
 			case "amordrine":
-				addToEveryPart(material, MetallurgyArmorTraits.stronglyAmordrine);
+				addToEveryPart(material, MetallurgyArmorTraits.strongly);
 				break;
 			case "kalendrite":
-				addToEveryPart(material, MetallurgyArmorTraits.stronglyKalendrite);
+				addToEveryPart(material, MetallurgyArmorTraits.strongly);
 				break;
 			case "astral_silver":
 				addToEveryPart(material, MetallurgyArmorTraits.jumpMaster);
@@ -40,7 +40,6 @@ public class SetArmorTraits {
 				break;
 			case "vulcanite":
 				addToEveryPart(material, MetallurgyArmorTraits.volcano);
-				break;
 			case "adamantine":
 				addToEveryPart(material, MetallurgyArmorTraits.foodly);
 				break;

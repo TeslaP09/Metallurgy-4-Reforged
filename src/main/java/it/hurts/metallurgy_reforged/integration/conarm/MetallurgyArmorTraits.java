@@ -15,8 +15,7 @@ import it.hurts.metallurgy_reforged.integration.conarm.traits.*;
 public class MetallurgyArmorTraits {
 
 	public static final AbstractArmorTrait quickly = new TraitQuickly();
-	public static final AbstractArmorTrait stronglyKalendrite = new TraitStrongly(0);
-	public static final AbstractArmorTrait stronglyAmordrine = new TraitStrongly(1);
+	public static final AbstractArmorTrait strongly = new TraitStrongly();
 	public static final AbstractArmorTrait jumpMaster = new TraitJumpMaster();
 	public static final AbstractArmorTrait resistance = new TraitResistance();
 	public static final AbstractArmorTrait deeply = new TraitDeeply();
@@ -26,7 +25,7 @@ public class MetallurgyArmorTraits {
 	public static final AbstractArmorTrait prometheum = new TraitPrometheum();
 	public static final AbstractArmorTrait blindness = new TraitBlindness();
 
-	public static final AbstractArmorTrait[] metallurgyArmorTrait = {quickly, stronglyAmordrine, stronglyKalendrite,
+	public static final AbstractArmorTrait[] metallurgyArmorTrait = {quickly, strongly,
 	                                                                 jumpMaster, resistance, deeply, volcano, foodly,
 	                                                                 prometheum, blindness};
 

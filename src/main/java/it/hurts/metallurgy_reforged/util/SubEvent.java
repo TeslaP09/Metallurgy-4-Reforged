@@ -45,8 +45,7 @@ public class SubEvent {
 		if (ModChecker.isConarmLoaded && GeneralConfig.conarmIntegration)
 		{
 			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.quickly);
-			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.stronglyAmordrine);
-			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.stronglyKalendrite);
+			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.strongly);
 			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.jumpMaster);
 			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.resistance);
 			MinecraftForge.EVENT_BUS.register(MetallurgyArmorTraits.deeply);
