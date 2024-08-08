@@ -9,34 +9,30 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
+import javax.annotation.Nullable;
+
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
-import slimeknights.tconstruct.library.utils.ToolHelper;
 
-import javax.annotation.Nullable;
+public class MetallurgyTraitAerialBane extends AbstractTrait implements IMetallurgyTrait {
 
-public class MetallurgyTraitBloodthirsty extends AbstractTrait implements IMetallurgyTrait {
-
-	public MetallurgyTraitBloodthirsty()
-	{
-		super("bloodthirsty_trait", 0xFF575000);
-		this.register("metallurgy.trait.bloodthirsty", "metallurgy.trait.bloodthirsty.tooltip");
+	public MetallurgyTraitAerialBane() {
+		super("aerialbane_trait", 0xFF575000);
+		this.register("metallurgy.trait.aerialbane", "metallurgy.trait.aerialbane.tooltip");
 	}
 
 	@Override
-	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) 
-	{
-		if (target.getHealth() <= 0)
-		{
-			ToolHelper.healTool(tool, 4, (EntityLivingBase) player);
+	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
+		if (!target.onGround) {
+			return (newDamage * 1.35f);
 		}
+		return newDamage;
 	}
 
 	@Override
-	public void register(String name, @Nullable String tooltip)
-	{
+	public void register(String name, @Nullable String tooltip) {
 		Utils.localizeEscapingCustomSequences(String.format(LOC_Name, name));
 		if (tooltip != null)
 			Utils.localizeEscapingCustomSequences(String.format(LOC_Name, tooltip));

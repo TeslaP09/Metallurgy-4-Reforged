@@ -9,29 +9,38 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
+import javax.annotation.Nullable;
+
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 import slimeknights.tconstruct.library.utils.ToolHelper;
 
-import javax.annotation.Nullable;
+public class MetallurgyTraitReinforced extends AbstractTrait implements IMetallurgyTrait {
 
-public class MetallurgyTraitBloodthirsty extends AbstractTrait implements IMetallurgyTrait {
-
-	public MetallurgyTraitBloodthirsty()
+	public MetallurgyTraitReinforced()
 	{
-		super("bloodthirsty_trait", 0xFF575000);
-		this.register("metallurgy.trait.bloodthirsty", "metallurgy.trait.bloodthirsty.tooltip");
+		super("reinforced_trait", 0xFF575000);
+		this.register("metallurgy.trait.reinforced", "metallurgy.trait.reinforced.tooltip");
 	}
 
-	@Override
-	public void afterHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damageDealt, boolean wasCritical, boolean wasHit) 
+	@SubscribeEvent
+	public void onEntityHurtEvent(LivingHurtEvent event)
 	{
-		if (target.getHealth() <= 0)
-		{
-			ToolHelper.healTool(tool, 4, (EntityLivingBase) player);
-		}
+		EntityLivingBase entity = event.getEntityLiving();
+		if (!canBeApplied(entity))
+			return;
+
+		float absorbedDamage = event.getAmount() * 0.125F;
+		ToolHelper.damageTool(entity.getHeldItemMainhand(), (int) (absorbedDamage * 2), entity);
+		event.setAmount(event.getAmount() - absorbedDamage);
+
+	}
+
+	private boolean canBeApplied(EntityLivingBase entity) {
+		return this.isToolWithTrait(entity.getHeldItemMainhand());
 	}
 
 	@Override
@@ -43,3 +52,4 @@ public class MetallurgyTraitBloodthirsty extends AbstractTrait implements IMetal
 	}
 
 }
+ 

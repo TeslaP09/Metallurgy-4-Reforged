@@ -9,17 +9,14 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
+import javax.annotation.Nullable;
+
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
-
-import java.util.Set;
-
-import javax.annotation.Nullable;
 
 public class MetallurgyTraitEgo extends AbstractTrait implements IMetallurgyTrait {
 

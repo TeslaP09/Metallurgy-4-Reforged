@@ -113,7 +113,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, ecological);
 			break;
 			case "adamantine":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.symbiosisTrait);
 			break;
 			case "tartarite":
 				addToEveryPart(material, writable2);
@@ -125,7 +125,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, poisonous);
 			break;
 			case "black_steel":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.reinforcedTrait);
 			break;
 			case "osmium":
 			break;
@@ -148,7 +148,7 @@ public class SetTinkerTraits {
 					material.addTrait(MetallurgyTinkerTraits.duplicationTrait);
 			break;
 			case "krik":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.aerialBaneTrait);
 			break;
 			default:
 		}

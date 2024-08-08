@@ -77,7 +77,7 @@ advancement.metallurgy.main.steel.desc=Make your first batch of Steel
 advancement.metallurgy.main.black_steel=The Fortress Metal
 advancement.metallurgy.main.black_steel.desc=Obtain your first batch of Black Steel, first thing you notice is how sturdy the ingot is, with a lot of work you can probably make some heavy duty tools and armor with it.
 advancement.metallurgy.main.electrum=The Lightning Metal
-advancement.metallurgy.main.electrum.desc=Obtain your first batch of Electrum, you notice the metal is highly conductive and make sure to handle it properly. You ponder on, what it might be capable of. 
+advancement.metallurgy.main.electrum.desc=Obtain your first batch of Electrum, you notice the metal is highly conductive and make sure to handle it properly. You ponder on, what it might be capable of.
 advancement.metallurgy.main.hepatizon=The Metal of Theft
 advancement.metallurgy.main.hepatizon.desc=Obtain your first batch of Hepatizon by alloying Infuscolium with Steel in a 1:1 Ratio.
 advancement.metallurgy.main.tier3=Tier 3
@@ -1182,7 +1182,7 @@ metallurgy.subtitle.metal_detector_beep=Metal Detector Beeps
 modifier.opistognathus_trait.name=Opistognathus
 modifier.opistognathus_trait.desc=§oAquaman!\n§rIncrease attack/mining speed in water.
 modifier.duplication_trait.name=Duplication
-modifier.duplication_trait.desc=§ohey guys i did a bit of off camera mining\n§rHas a chance to duplicate drops.
+modifier.duplication_trait.desc=§oHey guys I did a bit of off camera mining\n§rHas a chance to duplicate drops.
 modifier.life_steal_trait.name=Life Steal
 modifier.life_steal_trait.desc=§oSiphon their life to yours!\n§rHas a Luck based chance to heal 0.4x of the dealt damage.
 
@@ -1195,21 +1195,27 @@ modifier.ego_trait.desc=§oYour ego even has its own gravitational pull!\n§rKil
 modifier.enderslayer_trait.name=Ender Slayer
 modifier.enderslayer_trait.desc=§oHated by all kinds of unimaginable horrors!\n§rDeal extra damage to end mobs, and also while in The End.
 modifier.precision_trait.name=Precision
-modifier.precision_trait.desc=§oPow! right in the kisser!\n§rCrits deal x2.0 dmg instead of x1.5.
+modifier.precision_trait.desc=§oPow! Right in the kisser!\n§rCrits deal x2.0 dmg instead of x1.5.
 modifier.cold_trait.name=Cold
 modifier.cold_trait.desc=§oBrrrrr...\n§rAttacks inflict slowness.
 modifier.armorreactive_trait.name=Armor Reactivity
 modifier.armorreactive_trait.desc=§oReverse Crude!\n§rDeal extra damage against targets with heavy armor.
 modifier.serialhealer_trait.name=Serial Healer
-modifier.serialhealer_trait.desc=§othat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
+modifier.serialhealer_trait.desc=§oThat's mine now!\n§rHeal 20% of the max hp of defeated enemies.
 modifier.phoenix_trait.name=Phoenix
 modifier.phoenix_trait.desc=§oIf they knock you down, get back up\n§r50% chance when tool breaks to revive with 100 durability.
 modifier.umbrallucency_trait.name=Umbral Lucency
 modifier.umbrallucency_trait.desc=§oYing and Yang\n§rGrants additional attack speed in darkness, and damage in light.
 modifier.bloodthirsty_trait.name=Bloodthirsty
-modifier.bloodthirsty_trait.desc=§ommm... scrumptious...\n§rDefeated enemies repair your tool.
+modifier.bloodthirsty_trait.desc=§oMmm... scrumptious...\n§rDefeated enemies repair your tool.
 modifier.starborn_trait.name=Starborn
 modifier.starborn_trait.desc=§oSPAAAAAAACEEE!!\n§rDeal bonus damage the higher you are in the sky (max of x1.25 damage), effect boosted at night or in the end.
+modifier.symbiosis_trait.name=Symbiosis
+modifier.symbiosis_trait.desc=§oWe... are Venom...\n§rTool will heal after eating, but tool will slowly lose durability while hungry.
+modifier.reinforced_trait.name=Reinforced
+modifier.reinforced_trait.desc=§oThe 5th armor slot\n§rYour tool will absorb a percentage of damage at the cost of durability.
+modifier.aerialbane_trait.name=Aerial Bane
+modifier.aerialbane_trait.desc=§oWorks great with levitation!\n§rYour tool will deal extra damage to targets in the air.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe
@@ -1753,7 +1759,7 @@ tooltip.metallurgy.ceruclase_shield=§3When activated, creates an icy sphere aro
 tooltip.metallurgy.lemurite_shield=§fWhile active, makes the player completely invisible to most entities (including other players).
 tooltip.metallurgy.orichalcum_buckler=Upgraded buckler. §2When attacked by a ranged enemy, reflects 1.5x of the damage to the attacker and teleports them to be within melee reach.
 tooltip.metallurgy.vulcanite_buckler=Upgraded buckler. §cWhen attacked by a melee enemy, creates a small explosion that knocks them back.
-tooltip.metallurgy.zinc_buckler=A generic buckler, a lighter and more durable alternative to the normal shield. While active, does not hinder the players movement speed but has a cooldown after each block. 
+tooltip.metallurgy.zinc_buckler=A generic buckler, a lighter and more durable alternative to the normal shield. While active, does not hinder the players movement speed but has a cooldown after each block.
 
 # Messages
 message.world_join_message.1=§6§lWelcome to Metallurgy 4: Reforged

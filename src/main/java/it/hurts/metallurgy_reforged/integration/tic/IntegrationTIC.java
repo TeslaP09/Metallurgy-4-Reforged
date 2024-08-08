@@ -72,6 +72,8 @@ public class IntegrationTIC {
 				TinkerRegistry.addMaterial(material);
 			}
 		});
+		
+		TICCompatSafe.tconLoaded = true;
 	}
 
 	public static void init()

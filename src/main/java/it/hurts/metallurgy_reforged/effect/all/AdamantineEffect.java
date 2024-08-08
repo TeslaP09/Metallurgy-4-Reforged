@@ -11,6 +11,7 @@ package it.hurts.metallurgy_reforged.effect.all;
 
 import it.hurts.metallurgy_reforged.effect.BaseMetallurgyEffect;
 import it.hurts.metallurgy_reforged.effect.EnumEffectCategory;
+import it.hurts.metallurgy_reforged.integration.tic.TICCompatSafe;
 import it.hurts.metallurgy_reforged.material.ModMetals;
 import it.hurts.metallurgy_reforged.util.ItemUtils;
 import net.minecraft.entity.Entity;
@@ -55,10 +56,8 @@ public class AdamantineEffect extends BaseMetallurgyEffect {
 			//Venti: EHE! XP
 			//PAIMON: EHE te nandayo! (￣^￣)
 			Spliterator<ItemStack> equiperator2000 = entity.getEquipmentAndArmor().spliterator();
-			StreamSupport.stream(equiperator2000, false)
-					.filter(equip -> equip.getItemDamage() > 0 &&
-							(ItemUtils.isMadeOfMetal(metal, equip.getItem()) || TartariteEffect.getParagonMetal(equip) == metal))
-					.forEach(stack -> {
+			StreamSupport.stream(equiperator2000, false).filter(equip -> equip.getItemDamage() > 0 &&
+							(ItemUtils.isMadeOfMetal(metal, equip.getItem()) || TartariteEffect.getParagonMetal(equip) == metal) || TICCompatSafe.isToolWithSymbiosis(equip)).forEach(stack -> {
 						if (stack.getItemDamage() != 0)
 						{
 							if (!entity.world.isRemote)
@@ -78,7 +77,7 @@ public class AdamantineEffect extends BaseMetallurgyEffect {
 
 					ItemStack stack = inventory.get(i);
 
-					if ((ItemUtils.isMadeOfMetal(metal, stack.getItem()) || TartariteEffect.getParagonMetal(stack) == metal) && stack.getItemDamage() != 0)
+					if ((ItemUtils.isMadeOfMetal(metal, stack.getItem()) || TartariteEffect.getParagonMetal(stack) == metal || TICCompatSafe.isToolWithSymbiosis(stack)) && stack.getItemDamage() != 0)
 					{
 						if (!entity.world.isRemote)
 							stack.setItemDamage(Math.max(stack.getItemDamage() - ((ItemFood) food).getHealAmount(stack) * 2, 0));
