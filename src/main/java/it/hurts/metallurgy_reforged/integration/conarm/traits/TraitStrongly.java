@@ -12,7 +12,7 @@ import slimeknights.tconstruct.library.utils.ToolHelper;
 
 public class TraitStrongly extends AbstractArmorTrait implements IConarmMetallurgyTrait {
 
-    public TraitStrongly()
+    public TraitStrongly() //gives player strength 1 if at least one piece is worn, gives strength 2 if all four pieces are worn
     {
         super("strongly", TextFormatting.GREEN);
     }
@@ -24,7 +24,7 @@ public class TraitStrongly extends AbstractArmorTrait implements IConarmMetallur
     {
         int amount = getTotalPieces(event.player);
         if (amount  > 0)
-            event.player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 40, amount < 2 ? 0 : 1, false, false));
+            event.player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 40, amount < 4 ? 0 : 1, false, false));
     }
 
     private int getTotalPieces(EntityPlayer player)

@@ -22,7 +22,7 @@ import slimeknights.tconstruct.library.utils.ToolHelper;
 
 public class MetallurgyTraitSymbiosis extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitSymbiosis() {
+	public MetallurgyTraitSymbiosis() { //tool will heal when player eats, but will drain durability if player is hungry (similar to Inclusions, but durability drains more)
 		super("symbiosis_trait", 0xFF575000);
 		this.register("metallurgy.trait.symbiosis", "metallurgy.trait.symbiosis.tooltip");
 	}

@@ -19,8 +19,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitExplosive extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitExplosive()
-	{
+	public MetallurgyTraitExplosive() { //1/5 chance to cause an explosion on hit
 		super("explosive_trait", 0xFF575000);
 		this.register("metallurgy.trait.explosive", "metallurgy.trait.explosive.tooltip");
 	}
@@ -29,9 +28,8 @@ public class MetallurgyTraitExplosive extends AbstractTrait implements IMetallur
 	public void onHit(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, boolean isCritical) 
 	{	
 		if (player.world.isRemote) return;
-		if (Math.random() < 0.34 && (player instanceof EntityPlayer && ((EntityPlayer) player).getCooledAttackStrength(1f) > 0.9))
-			//causes explosion at the entity hit that increases explosion size every 15 damage dealt (14 and below damage = size 1, 15 damage = size 2, 30 damage = size 3 etc)
-			target.world.createExplosion(player, target.posX, target.posY + 1.0, target.posZ, (damage / 15) + 1, false);
+		if (Math.random() < 0.21 && (player instanceof EntityPlayer && ((EntityPlayer) player).getCooledAttackStrength(1f) > 0.9))
+			target.world.createExplosion(player, target.posX, target.posY + 1.0, target.posZ, 1, false);
 	}
 
 	@Override

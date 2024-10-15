@@ -40,6 +40,7 @@ public class SetArmorTraits {
 				break;
 			case "vulcanite":
 				addToEveryPart(material, MetallurgyArmorTraits.volcano);
+				break;
 			case "adamantine":
 				addToEveryPart(material, MetallurgyArmorTraits.foodly);
 				break;

@@ -18,7 +18,7 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 public class MetallurgyTraitStarborn extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitStarborn() {
+	public MetallurgyTraitStarborn() { //player deals 1x damage at y70 and below, damage will scale the higher you are (max of 1.25x at y150), effect boosted in the end or at night
 		super("starborn_trait", 0xFF575000);
 		this.register("metallurgy.trait.starborn", "metallurgy.trait.starborn.tooltip");
 	}

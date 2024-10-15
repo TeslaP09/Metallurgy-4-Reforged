@@ -12,23 +12,39 @@ package it.hurts.metallurgy_reforged.integration.tic.trait;
 import javax.annotation.Nullable;
 
 import it.hurts.metallurgy_reforged.util.Utils;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
 
-public class MetallurgyTraitAerialBane extends AbstractTrait implements IMetallurgyTrait {
+public class MetallurgyTraitArcaneSynergy extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitAerialBane() { //player deals 1.35x damage against targets in the air
-		super("aerialbane_trait", 0xFF575000);
-		this.register("metallurgy.trait.aerialbane", "metallurgy.trait.aerialbane.tooltip");
+	public MetallurgyTraitArcaneSynergy() {
+		super("arcanesynergy_trait", 0xFF575000);
+		this.register("metallurgy.trait.arcanesynergy", "metallurgy.trait.arcanesynergy.tooltip");
+	}
+
+	public int getPieces(EntityLivingBase entity) {
+        int amount = 0;
+        for (ItemStack armorPiece : entity.getArmorInventoryList())
+        {
+            if (!EnchantmentHelper.getEnchantments(armorPiece).isEmpty())
+                amount++;
+        }
+        return amount;
+	}
+	
+	@Override
+	public void miningSpeed(ItemStack tool, PlayerEvent.BreakSpeed event) {
+		float bonus = getPieces(event.getEntityPlayer()) * 0.1f;
+		event.setNewSpeed(event.getNewSpeed() * (1 + bonus));
 	}
 
 	@Override
 	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
-		if (!target.onGround) {
-			return (newDamage * 1.35f);
-		}
-		return newDamage;
+		float bonus = getPieces(player) * 0.1f;
+		return newDamage * (1 + bonus);
 	}
 
 	@Override

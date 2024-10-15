@@ -20,8 +20,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitCold extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitCold()
-	{
+	public MetallurgyTraitCold() { //player inflicts slowness 2
 		super("cold_trait", 0xFF575000);
 		this.register("metallurgy.trait.cold", "metallurgy.trait.cold.tooltip");
 	}

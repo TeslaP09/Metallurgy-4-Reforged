@@ -27,7 +27,7 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 public class MetallurgyTraitUmbralLucency extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitUmbralLucency() {
+	public MetallurgyTraitUmbralLucency() { //player deals 1.25x damage in light, and gains +40% attack speed in darkness
 		super("umbrallucency_trait", 0xFF575000);
 		this.register("metallurgy.trait.umbrallucency", "metallurgy.trait.umbrallucency.tooltip");
 		MinecraftForge.EVENT_BUS.register(this);

@@ -19,8 +19,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitEnderSlayer extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitEnderSlayer()
-	{
+	public MetallurgyTraitEnderSlayer() { //player deals 1.3x damage if target is enderman, endermite, shulker, ender dragon, or is in the end
 		super("enderslayer_trait", 0xFF575000);
 		this.register("metallurgy.trait.enderslayer", "metallurgy.trait.enderslayer.tooltip");
 	}

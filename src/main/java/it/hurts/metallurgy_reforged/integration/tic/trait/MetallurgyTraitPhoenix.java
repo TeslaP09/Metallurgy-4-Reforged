@@ -22,8 +22,7 @@ import slimeknights.tconstruct.library.utils.ToolHelper;
 
 public class MetallurgyTraitPhoenix extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitPhoenix() 
-	{
+	public MetallurgyTraitPhoenix() { //50% chance to revive tool when broken to 100 durability
 		super("phoenix_trait", 0xFF575000);
 		this.register("metallurgy.trait.phoenix", "metallurgy.trait.phoenix.tooltip");
 	}

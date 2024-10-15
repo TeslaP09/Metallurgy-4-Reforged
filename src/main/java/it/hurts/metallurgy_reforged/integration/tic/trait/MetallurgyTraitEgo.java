@@ -20,8 +20,7 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 public class MetallurgyTraitEgo extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitEgo()
-	{
+	public MetallurgyTraitEgo() { //player receives strength 1 and speed 1 if target is killed in one hit
 		super("ego_trait", 0xFF575000);
 		this.register("metallurgy.trait.ego", "metallurgy.trait.ego.tooltip");
 	}

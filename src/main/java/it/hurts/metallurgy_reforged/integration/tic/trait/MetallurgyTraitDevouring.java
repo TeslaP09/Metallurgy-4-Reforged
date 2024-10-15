@@ -20,7 +20,7 @@ import slimeknights.tconstruct.library.traits.AbstractTrait;
 
 public class MetallurgyTraitDevouring extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitDevouring() {
+	public MetallurgyTraitDevouring() { //chance for player to get fed after kill
 		super("devouring_trait", 0xFF575000);
 		this.register("metallurgy.trait.devouring", "metallurgy.trait.devouring.tooltip");
 	}

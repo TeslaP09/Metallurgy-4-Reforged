@@ -40,6 +40,13 @@ public class MetallurgyTinkerTraits {
 	public static final MetallurgyTraitSymbiosis symbiosisTrait = new MetallurgyTraitSymbiosis();
 	public static final AbstractTrait reinforcedTrait = new MetallurgyTraitReinforced();
 	public static final AbstractTrait aerialBaneTrait = new MetallurgyTraitAerialBane();
+	public static final AbstractTrait bypassing1Trait = new MetallurgyTraitBypassing(1);
+	public static final AbstractTrait bypassing2Trait = new MetallurgyTraitBypassing(2);
+	public static final AbstractTrait windBurstTrait = new MetallurgyTraitWindBurst();
+	public static final AbstractTrait clockworkTrait = new MetallurgyTraitClockwork();
+	public static final AbstractTrait timedilationTrait = new MetallurgyTraitTimeDilation();
+	public static final AbstractTrait backstabTrait = new MetallurgyTraitBackstab();
+	public static final AbstractTrait arcaneSynergyTrait = new MetallurgyTraitArcaneSynergy();
 	
 	public static boolean isMetallurgyTrait(EntityPlayer player, String traitToCheck)
 	{

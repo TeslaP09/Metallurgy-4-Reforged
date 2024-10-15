@@ -18,8 +18,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitPrecision extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitPrecision()
-	{
+	public MetallurgyTraitPrecision() { //critical attacks deal 2x damage instead of 1.5x
 		super("precision_trait", 0xFF575000);
 		this.register("metallurgy.trait.precision", "metallurgy.trait.precision.tooltip");
 	}

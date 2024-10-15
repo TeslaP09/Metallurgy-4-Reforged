@@ -1187,7 +1187,7 @@ modifier.life_steal_trait.name=Life Steal
 modifier.life_steal_trait.desc=§oSiphon their life to yours!\n§rHas a Luck based chance to heal 0.4x of the dealt damage.
 
 modifier.explosive_trait.name=Explosive
-modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit that scales with damage.
+modifier.explosive_trait.desc=§oAll your attacks explode!\n§rChance to create an explosion on hit.
 modifier.devouring_trait.name=Devouring
 modifier.devouring_trait.desc=§oHangry!\n§rChance to consume your enemies after you defeat them.
 modifier.ego_trait.name=Ego
@@ -1216,6 +1216,19 @@ modifier.reinforced_trait.name=Reinforced
 modifier.reinforced_trait.desc=§oThe 5th armor slot\n§rYour tool will absorb a percentage of damage at the cost of durability.
 modifier.aerialbane_trait.name=Aerial Bane
 modifier.aerialbane_trait.desc=§oWorks great with levitation!\n§rYour tool will deal extra damage to targets in the air.
+modifier.bypassing_trait.name=Bypassing
+modifier.bypassing_trait.desc=§oArmor privileges revoked\n§rA portion of your damage will bypass most armor and resistances.
+modifier.windburst_trait.name=Wind Burst
+modifier.windburst_trait.desc=§oWatch your hat!\n§rAttacks will cause bursts of wind.
+modifier.clockwork_trait.name=Clockwork
+modifier.clockwork_trait.desc=§oIt's time for you to get a watch\n§rYour tool recieves a flat damage bonus per trait and modifier.
+modifier.clockwork_trait.extra=Clockwork Damage: +%s
+modifier.timedilation_trait.name=Time Dilation
+modifier.timedilation_trait.desc=§oAlmost faster than light!\n§rIncreases your mining and attack speed by 20%.
+modifier.backstab_trait.name=Backstab
+modifier.backstab_trait.desc=§oRoll for stealth\n§rAttacks from behind deal massive damage.
+modifier.arcanesynergy_trait.name=Arcane Synergy
+modifier.arcanesynergy_trait.desc=§oIT'S WIZARD TIME\n§rWearing enchanted armor will increase your tool's stats.
 
 #Tools
 item.metallurgy.adamantine_axe.name=Adamantine Axe

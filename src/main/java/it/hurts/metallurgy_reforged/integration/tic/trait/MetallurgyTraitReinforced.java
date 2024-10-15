@@ -20,8 +20,7 @@ import slimeknights.tconstruct.library.utils.ToolHelper;
 
 public class MetallurgyTraitReinforced extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitReinforced()
-	{
+	public MetallurgyTraitReinforced() { //tool will absorb 12.5% of damage at the cost of twice the durability
 		super("reinforced_trait", 0xFF575000);
 		this.register("metallurgy.trait.reinforced", "metallurgy.trait.reinforced.tooltip");
 	}

@@ -19,7 +19,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitArmorReactive extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitArmorReactive() {
+	public MetallurgyTraitArmorReactive() { //player deals 1.3x damage if target has over 10 armor points
 		super("armorreactive_trait", 0xFF575000);
 		this.register("metallurgy.trait.armorreactive", "metallurgy.trait.armorreactive.tooltip");
 	}

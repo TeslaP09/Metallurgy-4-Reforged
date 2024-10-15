@@ -18,8 +18,7 @@ import javax.annotation.Nullable;
 
 public class MetallurgyTraitSerialHealer extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitSerialHealer()
-	{
+	public MetallurgyTraitSerialHealer() { //player will heal 20% of the targets max hp on kill
 		super("serialhealer_trait", 0xFF575000);
 		this.register("metallurgy.trait.serialhealer", "metallurgy.trait.serialhealer.tooltip");
 	}

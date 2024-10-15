@@ -28,8 +28,7 @@ public class SetTinkerTraits {
 			//		TraitSuperheat = Increased damage to enemies that are on fire
 			
 			case "amordrine":
-				material.addTrait(holy, HEAD);
-				addToEveryPart(material, dense);
+				addToEveryPart(material, holy);
 			break;
 			case "haderoth":
 				material.addTrait(MetallurgyTinkerTraits.phoenixTrait, HEAD);
@@ -51,8 +50,8 @@ public class SetTinkerTraits {
 				addToEveryPart(material, MetallurgyTinkerTraits.lifeStealTrait);
 			break;
 			case "quicksilver":
-				material.addTrait(momentum, HEAD);
-				material.addTrait(lightweight);
+				material.addTrait(lightweight, HEAD);
+				material.addTrait(momentum);
 			break;
 			case "brass":
 				addToEveryPart(material, writable);
@@ -62,7 +61,7 @@ public class SetTinkerTraits {
 				material.addTrait(unnatural);
 			break;
 			case "hepatizon":
-				material.addTrait(dense, HEAD);
+				addToEveryPart(material, MetallurgyTinkerTraits.backstabTrait);
 			break;
 			case "eximite":
 				material.addTrait(MetallurgyTinkerTraits.enderSlayerTrait, HEAD);
@@ -73,8 +72,8 @@ public class SetTinkerTraits {
 				material.addTrait(insatiable);
 			break;
 			case "desichalkos":
-				material.addTrait(dense, HEAD);
-				material.addTrait(dense);
+				material.addTrait(MetallurgyTinkerTraits.bypassing2Trait, HEAD);
+				material.addTrait(MetallurgyTinkerTraits.bypassing1Trait);
 			break;
 			case "celenegil":
 				material.addTrait(MetallurgyTinkerTraits.egoTrait, HEAD);
@@ -84,12 +83,10 @@ public class SetTinkerTraits {
 				addToEveryPart(material, MetallurgyTinkerTraits.precisionTrait);
 			break;
 			case "mithril":
-				material.addTrait(dense, HEAD);
-				material.addTrait(coldblooded);
-				addToEveryPart(material, writable2);
+				addToEveryPart(material, MetallurgyTinkerTraits.arcaneSynergyTrait);
 			break;
 			case "carmot":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.clockworkTrait);
 			break;
 			case "ceruclase":
 				addToEveryPart(material, MetallurgyTinkerTraits.coldTrait);
@@ -119,7 +116,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, writable2);
 			break;
 			case "atlarus":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.windBurstTrait);
 			break;
 			case "vyroxeres":
 				addToEveryPart(material, poisonous);
@@ -133,7 +130,7 @@ public class SetTinkerTraits {
 				addToEveryPart(material, coldblooded);
 			break;
 			case "inolashite":
-				addToEveryPart(material, dense);
+				addToEveryPart(material, MetallurgyTinkerTraits.timedilationTrait);
 			break;
 			case "orichalcum":
 				addToEveryPart(material, MetallurgyTinkerTraits.bloodthirstyTrait);
@@ -142,8 +139,6 @@ public class SetTinkerTraits {
 				addToEveryPart(material, MetallurgyTinkerTraits.umbralLucencyTrait);
 			break;
 			case "midasium":
-				material.addTrait(dense, HEAD);
-				
 				if (GeneralConfig.enableDuplicationTrait)
 					material.addTrait(MetallurgyTinkerTraits.duplicationTrait);
 			break;

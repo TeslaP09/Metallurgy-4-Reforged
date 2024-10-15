@@ -9,26 +9,33 @@
 
 package it.hurts.metallurgy_reforged.integration.tic.trait;
 
+import java.util.List;
+
 import javax.annotation.Nullable;
+
+import com.google.common.collect.ImmutableList;
 
 import it.hurts.metallurgy_reforged.util.Utils;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
+import slimeknights.tconstruct.library.Util;
 import slimeknights.tconstruct.library.traits.AbstractTrait;
+import slimeknights.tconstruct.library.utils.TagUtil;
 
-public class MetallurgyTraitAerialBane extends AbstractTrait implements IMetallurgyTrait {
+public class MetallurgyTraitClockwork extends AbstractTrait implements IMetallurgyTrait {
 
-	public MetallurgyTraitAerialBane() { //player deals 1.35x damage against targets in the air
-		super("aerialbane_trait", 0xFF575000);
-		this.register("metallurgy.trait.aerialbane", "metallurgy.trait.aerialbane.tooltip");
+	public MetallurgyTraitClockwork() {
+		super("clockwork_trait", 0xFF575000);
+		this.register("metallurgy.trait.clockwork", "metallurgy.trait.clockwork.tooltip");
 	}
 
 	@Override
 	public float damage(ItemStack tool, EntityLivingBase player, EntityLivingBase target, float damage, float newDamage, boolean isCritical) {
-		if (!target.onGround) {
-			return (newDamage * 1.35f);
-		}
-		return newDamage;
+        NBTTagList tagList = TagUtil.getModifiersTagList(tool);
+        float dmgBoost = tagList.tagCount() * 0.5f;
+		return newDamage + dmgBoost;
 	}
 
 	@Override
@@ -37,5 +44,13 @@ public class MetallurgyTraitAerialBane extends AbstractTrait implements IMetallu
 		if (tooltip != null)
 			Utils.localizeEscapingCustomSequences(String.format(LOC_Name, tooltip));
 	}
+	
+    @Override
+    public List<String> getExtraInfo(ItemStack tool, NBTTagCompound modifierTag) {
+    	NBTTagList tagList = TagUtil.getModifiersTagList(tool);
+        float dmgBoost = tagList.tagCount() * 0.5f;
+        String loc = String.format(LOC_Extra, getModifierIdentifier());
+        return ImmutableList.of(Util.translateFormatted(loc, Util.df.format(dmgBoost)));
+    }
 
 }
