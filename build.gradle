@@ -114,7 +114,7 @@ dependencies {
     compileOnly 'curse.maven:immersive_engineering_0.12_98-231951:2974106'
 
     //Spartan Weaponry
-    compileOnly 'curse.maven:spartanweaponry_1.5.3-278141:4467344'
+    compileOnly 'curse.maven:spartan-weaponry-278141:5564836'
 }
 
 processResources {

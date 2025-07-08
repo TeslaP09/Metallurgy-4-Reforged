@@ -23,6 +23,7 @@ class SpartanRecipeGenerator {
             dagger         : ['I', 'H'],
             longsword      : [' I ', ' I ', 'IHI'],
             katana         : ['  I', ' I ', 'H  '],
+            scythe         : ['II ', '  I', ' P '],
             saber          : [' I', ' I', 'IH'],
             rapier         : ['  I', 'II ', 'HI '],
             greatsword     : [' I ', 'III', 'IHI'],

@@ -17,6 +17,7 @@ public enum SpartanWeaponType {
     DAGGER(SpartanWeaponryAPI::createDagger),
     LONGSWORD(SpartanWeaponryAPI::createLongsword),
     KATANA(SpartanWeaponryAPI::createKatana),
+    SCYTHE(SpartanWeaponryAPI::createScythe),
     SABER(SpartanWeaponryAPI::createSaber),
     RAPIER(SpartanWeaponryAPI::createRapier),
     GREATSWORD(SpartanWeaponryAPI::createGreatsword),

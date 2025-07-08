@@ -1,3 +1,7 @@
+## 1.4.2
+
+- Updated Spartan Weaponry to 1.6.0 to support Scythes
+
 ## 1.4.1
 
 - Fixed Dedicated Server crash on Spartan Weaponry Integration
